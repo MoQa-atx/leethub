@@ -20,9 +20,9 @@
 
         int p1_val;
         int p2_val;
-        int sum;
+       
         int carry=0;
-        int digit;
+       
 
 
        
@@ -33,16 +33,15 @@
 
 
 
-            p1_val=(p1!=NULL)? p1->val : 0;
-            p2_val=(p2!=NULL)? p2->val : 0;
+            
 
             
 
-            sum=p1_val+p2_val+carry;
+            int sum=(p1 ? p1->val : 0) + (p2 ? p2->val : 0) + carry;
 
 
-             digit = sum%10;
-            carry = sum/10;
+            int digit = sum % 10;
+            carry = sum / 10;
 
         struct ListNode* node=(struct ListNode*)malloc(sizeof(struct ListNode));
             node->val=digit;
