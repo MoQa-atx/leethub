@@ -18,11 +18,11 @@
         p2=l2;
 
 
-        int p1_val=0;
-        int p2_val=0;
-        int sum=0;
+        int p1_val;
+        int p2_val;
+        int sum;
         int carry=0;
-        int digit=0;
+        int digit;
 
 
        
@@ -33,27 +33,8 @@
 
 
 
-            if(p1!=NULL) {
-
-                p1_val=p1->val;
-
-            }
-
-            else{
-
-                p1_val=0;
-            }
-
-            if(p2!=NULL) {
-
-                p2_val=p2->val;
-            }
-
-            else{
-
-                p2_val=0;
-            }
-
+            p1_val=(p1!=NULL)? p1->val : 0;
+            p2_val=(p2!=NULL)? p2->val : 0;
 
             
 
@@ -85,9 +66,9 @@
             }
             if(p1!=NULL) p1=p1->next;
             if(p2!=NULL) p2=p2->next;
-
+            
         }
-
+    
 
     return head;
     }
